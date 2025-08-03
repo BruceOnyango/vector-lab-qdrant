@@ -102,7 +102,10 @@ query_vectors = model.encode(query_texts)
 combined_query = np.mean(query_vectors, axis=0)
 
 multi_results = client.search(
-    collection_name="movies", query_vector=combined_query.tolist(), limit=3
+    collection_name="movies",
+    query_vector=combined_query.tolist(),
+    limit=3,
+    with_payload=True,
 )
 
 print("\n🔗 Multi-vector Query Result for: 'magic' + 'teamwork'")
@@ -121,7 +124,7 @@ client.delete(collection_name="movies", points_selector=PointIdsList(points=[4])
 print("🗑️ Deleted movie ID 4")
 
 # Optional: Cosine similarity threshold filter (e.g., only show highly relevant results)
-threshold = 0.85
+threshold = 0.50
 print(f"\n🧮 Filtering results with similarity > {threshold}")
 for r in results:
     if r.score > threshold:
