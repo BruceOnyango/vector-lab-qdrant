@@ -19,9 +19,21 @@ Skill level: **Beginner to Intermediate**
 
 ### Prerequisites
 
-* Docker installed
-* Python 3.8+
-* Git
+* Docker installed - check version using the command 
+  ```bash 
+  docker --version
+  ```
+* Python 3.8+ - check version using the following command
+```bash
+python --version   # or python3 --version
+```
+
+* Git - check version using the following command
+```bash
+git --version
+```
+
+
 
 ### Step 1: Clone the Lab Repository
 
