@@ -635,4 +635,4 @@ vector-lab-qdrant/
 * Push all files to GitHub
 * Ensure `lab_manual.md`, `main.py`, `requirements.txt`, and screenshots are included
 
-## If anyone has reached this far thank you for your time hope you learnt something :)
+## If anyone has reached this far thank you for your time, we hope you learnt something :)
