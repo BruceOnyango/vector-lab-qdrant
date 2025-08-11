@@ -49,6 +49,7 @@ docker run -p 6333:6333 -p 6334:6334 \
   -v $(pwd)/qdrant_storage:/qdrant/storage \
   qdrant/qdrant:v1.9.1
 ```
+
 ### If using windows powershell use 2.2
 ```bash
 Note powershell and cmd( commandline )are not the same thing
@@ -62,7 +63,7 @@ docker run -p 6333:6333 -p 6334:6334 `
   qdrant/qdrant:v1.9.1
 ```
 
-> 🧪 REST API → `http://localhost:6333`
+> 🧪 REST API → `http://localhost:6333/dashboard#/collections/movies`
 
 ### Step 3.1: Install Python Requirements Linux users only
 
@@ -620,8 +621,10 @@ vector-lab-qdrant/
 ├── lab_manual.md
 ├── requirements.txt
 ├── screenshots/
-│   ├── collection.png
-│   ├── results.png
+│   ├── screenshot(111).png (Insert movie to qdrant)
+│   ├── screenshot(112).png (Filter Search)
+|   ├── screenshot(113).png (Multivector query)
+|   ├── screenshot(117).png (update, delete and threshold filter)
 └── qdrant_storage/ (generated)
 ```
 
@@ -631,3 +634,5 @@ vector-lab-qdrant/
 
 * Push all files to GitHub
 * Ensure `lab_manual.md`, `main.py`, `requirements.txt`, and screenshots are included
+
+## If anyone has reached this far thank you for your time hope you learnt something :)

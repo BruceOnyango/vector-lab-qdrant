@@ -46,7 +46,7 @@ movie_data = [
     ("A detective solves crimes with the help of a genius roommate.", "Mystery"),
 ]
 
-# Option 2: Load larger dataset (optional)
+# Option 2: Load larger dataset
 # df = pd.read_csv("./data/movie_plots.csv")
 # movie_data = list(zip(df["plot"], df["genre"]))
 
@@ -113,6 +113,18 @@ for hit in multi_results:
     print("Plot:", hit.payload["plot"])
     print("Score:", hit.score)
 
+
+# function to print collection
+def show_points(title):
+    points = client.scroll(collection_name="movies", limit=10)[0]
+    print(f"\n📋 {title}")
+    for p in points:
+        print(f"ID: {p.id}, Payload: {p.payload}")
+
+
+# function call to display collection information before update and delete
+show_points("Movies BEFORE update & delete")
+
 # Update metadata
 client.set_payload(collection_name="movies", payload={"updated": True}, points=[0])
 print("\n🔧 Updated metadata for movie ID 0")
@@ -123,7 +135,11 @@ client.delete(collection_name="movies", points_selector=PointIdsList(points=[4])
 
 print("🗑️ Deleted movie ID 4")
 
-# Optional: Cosine similarity threshold filter (e.g., only show highly relevant results)
+# function call to display collection information after update and delete
+show_points("Movies AFTER update & delete")
+
+
+# only show highly relevant results
 threshold = 0.50
 print(f"\n🧮 Filtering results with similarity > {threshold}")
 for r in results:
