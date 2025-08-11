@@ -136,7 +136,7 @@ Users of a movie recommendation engine often describe movies vaguely (e.g., "wiz
 
 ## 💻 4. Code Snippets & Advanced Features
 
-### 🔍 Basic Similarity Search
+### 🔍 Basic Similarity Search Code Snippet
 
 ```python
 results = client.search(
@@ -188,7 +188,7 @@ Here’s how the main OOP principles apply:
 
 
 
-### 🎯 Metadata Filtering
+### 🎯 Metadata Filtering Code Snippet
 
 ```python
 
@@ -230,7 +230,7 @@ query_filter = Filter(
 )
 ```
 
-### 🔗 Multi-Vector Query
+### 🔗 Multi-Vector Query Code Snippet
 
 ```python
 avg_vec = np.mean(model.encode(["magic", "teamwork"]), axis=0)
@@ -259,7 +259,7 @@ teamwork_vector = model.encode(["teamwork"])
 avg_vec = np.mean(model.encode(["magic", "teamwork"]), axis=0)
 ```
 
-### ✅ Update Payload
+### ✅ Update Payload Code Snippet
 
 ```python
 client.set_payload(payload={"updated": True}, points=[0])
@@ -276,7 +276,7 @@ This is useful for:
 - Adding new attributes after the vector is already stored.
 
 
-### 🗑️ Delete Point
+### 🗑️ Delete Point Code Snippet
 
 ```python
 client.delete(points_selector={"points": [4]})
@@ -297,7 +297,7 @@ Once deleted:
 - The point ID becomes available for reuse.
 
 
-### 🧮 Similarity Thresholding
+### 🧮 Similarity Thresholding Code Snippet
 
 ```python
 if hit.score > 0.85:
@@ -339,7 +339,7 @@ if hit.score > 0.85:
 2. **Embedding Generation**  
    The goal of embedding generation is to turn human-readable text into **numerical vectors** that preserve meaning so they can be compared mathematically.
 
-   Historically and in modern NLP, this has evolved in three main stages:
+   Historically and in modern NLP, this has evolved in the following ways:
 
    **a) Bag of Words (BoW)**  
    - **How it works:**  
@@ -586,8 +586,12 @@ Stored Vector ↔ Query Vector → Cosine Similarity → Compare to Threshold �
 
 Provided screenshots for:
 
-* Filtered results
+* Filter search results
 * Multi-query results
+* Movie instertion to collection
+* Update of movie collection
+* Deletion of movie results
+* Threshold filtering
 
 Stored in `./screenshots/`
 
