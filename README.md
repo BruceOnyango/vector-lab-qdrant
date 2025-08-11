@@ -17,9 +17,9 @@ Skill level: **Beginner to Intermediate**
 
 ## ⚙️ 1. Setup Instructions (Docker)
 
-### Prerequisites
+### Prerequisites and versions used for this tutorial
 
-* Docker installed - check version using the command 
+* Docker installed (27.0.3)- check version using the command 
   ```bash 
   docker --version
   ```
@@ -28,7 +28,7 @@ Skill level: **Beginner to Intermediate**
 python --version   # or python3 --version
 ```
 
-* Git - check version using the following command
+* Git (2.46.0)- check version using the following command
 ```bash
 git --version
 ```
