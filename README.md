@@ -619,8 +619,6 @@ vector-lab-qdrant/
 ├── main.py
 ├── lab_manual.md
 ├── requirements.txt
-├── data/
-│   └── movie_plots.csv  (optional)
 ├── screenshots/
 │   ├── collection.png
 │   ├── results.png
